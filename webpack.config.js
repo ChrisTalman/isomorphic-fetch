@@ -7,7 +7,7 @@ module.exports =
 {
 	mode: 'development',
 	entry: './src/index.ts',
-	target: 'node',
+	target: 'web',
 	resolve:
 	{
 		extensions:
