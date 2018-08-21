@@ -3,6 +3,8 @@
 import { Agent } from 'http';
 import { URLSearchParams } from 'url';
 
+export { URLSearchParams };
+
 export class Request extends Body
 {
     constructor(input: string | { href: string } | Request, init?: RequestInit);
