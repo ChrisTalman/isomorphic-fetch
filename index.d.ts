@@ -173,7 +173,7 @@ export type HeaderInit = Headers | string[];
 export type BodyInit = ArrayBuffer | ArrayBufferView | NodeJS.ReadableStream | string | URLSearchParams;
 export type RequestInfo = string | Request;
 
-export default function fetch
+export function fetch
 (
     url: string | Request,
     init?: RequestInit
