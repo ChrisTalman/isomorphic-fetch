@@ -8,6 +8,7 @@
 		"type": "git",
 		"url": "https://Bluecewe@bitbucket.org/Bluecewe/isomorphic-fetch.git"
 	},
+	"main": "src/index",
 	"devDependencies": {
 		"@types/node": "^10.7.1",
 		"ts-loader": "^4.5.0",
