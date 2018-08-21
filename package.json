@@ -8,7 +8,7 @@
 		"type": "git",
 		"url": "https://Bluecewe@bitbucket.org/Bluecewe/isomorphic-fetch.git"
 	},
-	"main": "src/index",
+	"main": "index.js",
 	"browser": false,
 	"devDependencies": {
 		"@types/node": "^10.7.1",
