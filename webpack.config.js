@@ -1,9 +1,12 @@
 'use strict';
 
+// External Modules
 const path = require('path');
 const ignore = /(?:node_modules|tools|build)$/;
+const clone = require('clone');
 
-module.exports =
+// Browser
+const BROWSER =
 {
 	mode: 'development',
 	entry: './src/index.ts',
@@ -23,7 +26,7 @@ module.exports =
 	},
 	output:
 	{
-		filename: 'index.js',
+		filename: 'browser.js',
 		path: path.resolve(__dirname, './'),
 		libraryTarget: 'umd'
 	},
@@ -46,3 +49,10 @@ module.exports =
 		]
 	}
 };
+
+// Node
+const NODE = clone(BROWSER);
+NODE.target = 'node';
+NODE.output.filename = 'index.js';
+
+module.exports = [BROWSER, NODE];
