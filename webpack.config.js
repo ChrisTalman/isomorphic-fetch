@@ -28,7 +28,8 @@ const BROWSER =
 	{
 		filename: 'browser.js',
 		path: path.resolve(__dirname, './'),
-		libraryTarget: 'umd'
+		libraryTarget: 'umd',
+		globalObject: 'this'
 	},
 	watch: true,
 	module:
