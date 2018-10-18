@@ -1,10 +1,5 @@
 'use strict';
 
-// External Modules
-import nodeFetch from 'node-fetch';
-import * as NodeFetch from 'node-fetch';
-import * as URL from 'url';
-
 let actualFetch;
 let actualHeaders;
 let actualRequest;
@@ -14,7 +9,9 @@ let actualURLSearchParams;
 // @ts-ignore
 if (typeof fetch === 'undefined')
 {
-    actualFetch = nodeFetch;
+	const NodeFetch = require('node-fetch');
+    const URL = require('url');
+    actualFetch = NodeFetch.default;
     actualHeaders = NodeFetch.Headers;
     actualRequest = NodeFetch.Request;
     actualResponse = NodeFetch.Response;

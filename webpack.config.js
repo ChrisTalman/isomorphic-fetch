@@ -1,6 +1,7 @@
 'use strict';
 
 // External Modules
+const Webpack = require('webpack');
 const Path = require('path');
 
 // Constants
@@ -21,7 +22,8 @@ module.exports =
 		alias:
 		{
 			src: __dirname + '/src',
-			node_modules: __dirname + '/node_modules'
+			node_modules: __dirname + '/node_modules',
+			'node-fetch$': 'node-fetch/lib/index.js'
 		}
 	},
 	output:
@@ -48,5 +50,9 @@ module.exports =
 				exclude: IGNORE
 			}
 		]
-	}
+	},
+	plugins:
+	[
+		new Webpack.IgnorePlugin(/^encoding$/, /node-fetch/)
+	]
 };
