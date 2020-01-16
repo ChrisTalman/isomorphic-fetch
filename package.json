@@ -1,8 +1,6 @@
 {
-	"name": "@ChrisTalman/isomorphic-fetch",
+	"name": "@chris-talman/isomorphic-fetch",
 	"version": "0.1.3",
-	"description": "isomorphic-fetch",
-	"main": "index.js",
 	"devDependencies": {
 		"@types/node": "^10.12.0",
 		"node-fetch": "^2.2.0",
